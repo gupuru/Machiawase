@@ -28,6 +28,7 @@ class CameraViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.black
         
         let userDefaults = UserDefaults.standard
         firebaseName = userDefaults.string(forKey: "name")
