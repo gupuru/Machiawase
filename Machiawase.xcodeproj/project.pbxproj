@@ -13,12 +13,12 @@
 		1D24A3601E6A556A00E82BD4 /* MachiawaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D24A35F1E6A556A00E82BD4 /* MachiawaseTests.swift */; };
 		1D24A36B1E6A556A00E82BD4 /* MachiawaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D24A36A1E6A556A00E82BD4 /* MachiawaseUITests.swift */; };
 		2692C045675060E72CAF206F /* Pods_Machiawase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187FA12421ED9D40A481A04A /* Pods_Machiawase.framework */; };
+		431EEF2E1E6A9A1800A6CF51 /* PeopleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EEF2C1E6A9A1800A6CF51 /* PeopleManager.swift */; };
+		431EEF2F1E6A9A1800A6CF51 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EEF2D1E6A9A1800A6CF51 /* PeopleView.swift */; };
 		43EDDD971E6A58BD00C9B314 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD961E6A58BD00C9B314 /* DebugViewController.swift */; };
 		43EDDD9B1E6A5F7300C9B314 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD9A1E6A5F7300C9B314 /* CameraViewController.swift */; };
 		43EDDD9D1E6A5F9500C9B314 /* CaptureStillImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD9C1E6A5F9500C9B314 /* CaptureStillImageView.swift */; };
 		43EDDDA01E6A651000C9B314 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD9F1E6A651000C9B314 /* LoginViewController.swift */; };
-		43EDDDA51E6A7BB200C9B314 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDDA41E6A7BB200C9B314 /* PeopleView.swift */; };
-		43EDDDA71E6A898400C9B314 /* PeopleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDDA61E6A898400C9B314 /* PeopleManager.swift */; };
 		556CBFBB1E6A7D780017C391 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 556CBFBA1E6A7D780017C391 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -52,12 +52,12 @@
 		1D24A3661E6A556A00E82BD4 /* MachiawaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MachiawaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D24A36A1E6A556A00E82BD4 /* MachiawaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachiawaseUITests.swift; sourceTree = "<group>"; };
 		1D24A36C1E6A556A00E82BD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		431EEF2C1E6A9A1800A6CF51 /* PeopleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleManager.swift; sourceTree = "<group>"; };
+		431EEF2D1E6A9A1800A6CF51 /* PeopleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		43EDDD961E6A58BD00C9B314 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		43EDDD9A1E6A5F7300C9B314 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		43EDDD9C1E6A5F9500C9B314 /* CaptureStillImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureStillImageView.swift; sourceTree = "<group>"; };
 		43EDDD9F1E6A651000C9B314 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		43EDDDA41E6A7BB200C9B314 /* PeopleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
-		43EDDDA61E6A898400C9B314 /* PeopleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleManager.swift; sourceTree = "<group>"; };
 		556CBFBA1E6A7D780017C391 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9990473F869D3890BE22C2B0 /* Pods-Machiawase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Machiawase.release.xcconfig"; path = "Pods/Target Support Files/Pods-Machiawase/Pods-Machiawase.release.xcconfig"; sourceTree = "<group>"; };
 		E9CEB98E146847B60430067F /* Pods-Machiawase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Machiawase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Machiawase/Pods-Machiawase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,11 +153,21 @@
 			path = MachiawaseUITests;
 			sourceTree = "<group>";
 		};
+		431EEF2B1E6A9A1800A6CF51 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				431EEF2C1E6A9A1800A6CF51 /* PeopleManager.swift */,
+				431EEF2D1E6A9A1800A6CF51 /* PeopleView.swift */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
 		43EDDD991E6A5F5F00C9B314 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
 				43EDDD9A1E6A5F7300C9B314 /* CameraViewController.swift */,
 				43EDDD9C1E6A5F9500C9B314 /* CaptureStillImageView.swift */,
+				431EEF2B1E6A9A1800A6CF51 /* People */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -173,8 +183,6 @@
 		9DEDC4332B41151123C8C8EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				43EDDDA41E6A7BB200C9B314 /* PeopleView.swift */,
-				43EDDDA61E6A898400C9B314 /* PeopleManager.swift */,
 				187FA12421ED9D40A481A04A /* Pods_Machiawase.framework */,
 			);
 			name = Frameworks;
@@ -368,7 +376,8 @@
 			files = (
 				43EDDD9D1E6A5F9500C9B314 /* CaptureStillImageView.swift in Sources */,
 				43EDDD971E6A58BD00C9B314 /* DebugViewController.swift in Sources */,
-				43EDDDA71E6A898400C9B314 /* PeopleManager.swift in Sources */,
+				431EEF2E1E6A9A1800A6CF51 /* PeopleManager.swift in Sources */,
+				431EEF2F1E6A9A1800A6CF51 /* PeopleView.swift in Sources */,
 				1D24A34B1E6A556A00E82BD4 /* AppDelegate.swift in Sources */,
 				43EDDDA01E6A651000C9B314 /* LoginViewController.swift in Sources */,
 				43EDDD9B1E6A5F7300C9B314 /* CameraViewController.swift in Sources */,
