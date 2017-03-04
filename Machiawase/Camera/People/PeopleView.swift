@@ -14,7 +14,7 @@ class PeopleView: UIView {
         static let ViewSize: CGSize = CGSize(width: 100.0, height: 100.0)
         static let MarkRadius: CGFloat = 10.0
         static let NameFont: UIFont = UIFont.boldSystemFont(ofSize: 13.0)
-        static let Distancefont: UIFont = UIFont.systemFont(ofSize: 12.0)
+        static let Distancefont: UIFont = UIFont.boldSystemFont(ofSize: 12.0)
     }
     
     init(with name: String, identifier: String) {
