@@ -60,6 +60,8 @@ class CameraViewController: UIViewController, CLLocationManagerDelegate {
     
     // MARK: Elements
     
+    lazy var peopleManager: PeopleManager = PeopleManager(with: self.view)
+    
     lazy var captureStillImageView: CaptureStillImageView = {
         let view: CaptureStillImageView = CaptureStillImageView(frame: self.view.bounds)
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
