@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import FirebaseDatabase
 
 class CameraViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -15,17 +16,27 @@ class CameraViewController: UIViewController, CLLocationManagerDelegate {
     var heading: CLLocationDirection! = nil
     var currentLocation: MLocation! = nil
     var toLocation: MLocation! = nil // 後で配列にする
-    
+    private let ref = FIRDatabase.database().reference()
+    private var firebaseName: String! = nil
+    private var firebaseId: String! = nil
+
     struct MLocation {
         public var latitude: CLLocationDegrees!
         public var longitude: CLLocationDegrees!
         public var altitude: CLLocationDistance!
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black
+        
+        let userDefaults = UserDefaults.standard
+        firebaseName = userDefaults.string(forKey: "name")
+        firebaseId = userDefaults.string(forKey: "firebaseId")
+        
+        ref.child("users").observe(.value, with: { snapshot in
+            self.observeOtherLocation(snapshot: snapshot)
+        })
         
         self.view.addSubview(self.captureStillImageView)
     }
@@ -74,6 +85,8 @@ class CameraViewController: UIViewController, CLLocationManagerDelegate {
         if (hd == nil || fromLc == nil || toLc == nil) {
             return
         }
+    
+        uploadMyLocation(fromLocation: fromLc)
         
         /*
         let latitude = (toLc.latitude - fromLc.latitude)
@@ -123,4 +136,21 @@ class CameraViewController: UIViewController, CLLocationManagerDelegate {
             break
         }
     }
+    
+    /** upload my location data to firebase */
+    private func uploadMyLocation(fromLocation fromLc: MLocation) {
+        if let name: String = self.firebaseName {
+            let post = ["user": ["name": name], "location": ["longitude": fromLc.longitude, "latitude": fromLc.latitude, "altitude": fromLc.altitude]] as [String : Any]
+            if let id: String = self.firebaseId {
+                let childUpdates = ["/users/\(id)/": post]
+                ref.updateChildValues(childUpdates)
+            }
+        }
+    }
+    
+    /** observe firebase**/
+    private func observeOtherLocation(snapshot: FIRDataSnapshot) {
+      //
+    }
+
 }
