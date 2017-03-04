@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1D24A34B1E6A556A00E82BD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D24A34A1E6A556A00E82BD4 /* AppDelegate.swift */; };
-		1D24A34D1E6A556A00E82BD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D24A34C1E6A556A00E82BD4 /* ViewController.swift */; };
-		1D24A3501E6A556A00E82BD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D24A34E1E6A556A00E82BD4 /* Main.storyboard */; };
 		1D24A3521E6A556A00E82BD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D24A3511E6A556A00E82BD4 /* Assets.xcassets */; };
 		1D24A3551E6A556A00E82BD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D24A3531E6A556A00E82BD4 /* LaunchScreen.storyboard */; };
 		1D24A3601E6A556A00E82BD4 /* MachiawaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D24A35F1E6A556A00E82BD4 /* MachiawaseTests.swift */; };
 		1D24A36B1E6A556A00E82BD4 /* MachiawaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D24A36A1E6A556A00E82BD4 /* MachiawaseUITests.swift */; };
+		43EDDD971E6A58BD00C9B314 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD961E6A58BD00C9B314 /* DebugViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +35,6 @@
 /* Begin PBXFileReference section */
 		1D24A3471E6A556A00E82BD4 /* Machiawase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Machiawase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D24A34A1E6A556A00E82BD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D24A34C1E6A556A00E82BD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1D24A34F1E6A556A00E82BD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D24A3511E6A556A00E82BD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D24A3541E6A556A00E82BD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D24A3561E6A556A00E82BD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +44,7 @@
 		1D24A3661E6A556A00E82BD4 /* MachiawaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MachiawaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D24A36A1E6A556A00E82BD4 /* MachiawaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachiawaseUITests.swift; sourceTree = "<group>"; };
 		1D24A36C1E6A556A00E82BD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43EDDD961E6A58BD00C9B314 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				1D24A34A1E6A556A00E82BD4 /* AppDelegate.swift */,
-				1D24A34C1E6A556A00E82BD4 /* ViewController.swift */,
-				1D24A34E1E6A556A00E82BD4 /* Main.storyboard */,
+				43EDDD961E6A58BD00C9B314 /* DebugViewController.swift */,
 				1D24A3511E6A556A00E82BD4 /* Assets.xcassets */,
 				1D24A3531E6A556A00E82BD4 /* LaunchScreen.storyboard */,
 				1D24A3561E6A556A00E82BD4 /* Info.plist */,
@@ -193,6 +190,7 @@
 				TargetAttributes = {
 					1D24A3461E6A556A00E82BD4 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QTG7MUN42X;
 						ProvisioningStyle = Automatic;
 					};
 					1D24A35A1E6A556A00E82BD4 = {
@@ -234,7 +232,6 @@
 			files = (
 				1D24A3551E6A556A00E82BD4 /* LaunchScreen.storyboard in Resources */,
 				1D24A3521E6A556A00E82BD4 /* Assets.xcassets in Resources */,
-				1D24A3501E6A556A00E82BD4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D24A34D1E6A556A00E82BD4 /* ViewController.swift in Sources */,
+				43EDDD971E6A58BD00C9B314 /* DebugViewController.swift in Sources */,
 				1D24A34B1E6A556A00E82BD4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1D24A34E1E6A556A00E82BD4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1D24A34F1E6A556A00E82BD4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1D24A3531E6A556A00E82BD4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -410,6 +399,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = QTG7MUN42X;
 				INFOPLIST_FILE = Machiawase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hazukit.com.Machiawase;
@@ -422,6 +413,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = QTG7MUN42X;
 				INFOPLIST_FILE = Machiawase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hazukit.com.Machiawase;
@@ -503,6 +496,7 @@
 				1D24A3711E6A556A00E82BD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D24A3721E6A556A00E82BD4 /* Build configuration list for PBXNativeTarget "MachiawaseTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +505,7 @@
 				1D24A3741E6A556A00E82BD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D24A3751E6A556A00E82BD4 /* Build configuration list for PBXNativeTarget "MachiawaseUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +514,7 @@
 				1D24A3771E6A556A00E82BD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
