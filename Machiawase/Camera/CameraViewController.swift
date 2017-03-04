@@ -7,9 +7,22 @@
 //
 
 import UIKit
+import CoreLocation
 
-class CameraViewController: UIViewController {
-
+class CameraViewController: UIViewController, CLLocationManagerDelegate {
+    
+    var lm: CLLocationManager! = nil
+    var heading: CLHeading! = nil
+    var currentLocation: MLocation! = nil
+    var toLocation: MLocation! = nil // 後で配列にする
+    
+    struct MLocation {
+        public var latitude: CLLocationDegrees!
+        public var longitude: CLLocationDegrees!
+        public var altitude: CLLocationDistance!
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,15 +31,30 @@ class CameraViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        toLocation = MLocation()
+        toLocation.latitude = 35.698353
+        toLocation.longitude = 139.773114
+        toLocation.altitude = 0
         
         self.captureStillImageView.setupCamera()
         self.captureStillImageView.startSession()
+        if CLLocationManager.locationServicesEnabled() {
+            lm = CLLocationManager()
+            lm.delegate = self
+            lm.requestAlwaysAuthorization()
+            lm.desiredAccuracy = kCLLocationAccuracyBest
+            lm.distanceFilter = 300
+            lm.startUpdatingLocation()
+            lm.startUpdatingHeading();
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
         self.captureStillImageView.stopSession()
+        lm.stopUpdatingHeading();
+        lm.stopUpdatingLocation();
     }
     
     // MARK: Elements
@@ -36,4 +64,46 @@ class CameraViewController: UIViewController {
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         return view
     }()
+    
+    // MARK: -
+    // MARK: private methods
+    private func displayPoint(heading hd: CLHeading!, fromLocation fromLc: MLocation!,  toLocation toLc: MLocation!) {
+        if (hd == nil || fromLc == nil || toLc == nil) {
+            return
+        }
+        
+    }
+    
+    // MARK: -
+    // MARK: CLLocationManagerDelegate methods
+    /** 位置情報取得成功時 */
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let newLocation = locations.last else {
+            return
+        }
+        currentLocation = MLocation()
+        currentLocation.latitude = newLocation.coordinate.latitude
+        currentLocation.longitude = newLocation.coordinate.longitude
+        currentLocation.altitude = newLocation.altitude
+        
+        displayPoint(heading: heading, fromLocation: currentLocation, toLocation: toLocation)
+    }
+    
+    /** 方向取得成功時 */
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        heading = newHeading
+        displayPoint(heading: heading, fromLocation: currentLocation, toLocation: toLocation)
+    }
+    
+    /** 位置情報取得失敗時 */
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status:   CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            lm.requestWhenInUseAuthorization()
+        case .restricted, .denied:
+            break
+        case .authorizedAlways, .authorizedWhenInUse:
+            break
+        }
+    }
 }
