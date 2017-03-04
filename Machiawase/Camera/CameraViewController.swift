@@ -17,6 +17,8 @@ class CameraViewController: UIViewController, CLLocationManagerDelegate {
     var currentLocation: MLocation! = nil
     var toLocation: MLocation! = nil // 後で配列にする
     private let ref = FIRDatabase.database().reference()
+    private var firebaseName: String! = nil
+    private var firebaseId: String! = nil
 
     struct MLocation {
         public var latitude: CLLocationDegrees!
@@ -26,6 +28,14 @@ class CameraViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let userDefaults = UserDefaults.standard
+        firebaseName = userDefaults.string(forKey: "name")
+        firebaseId = userDefaults.string(forKey: "firebaseId")
+        
+        ref.child("users").observe(.value, with: { snapshot in
+            self.observeOtherLocation(snapshot: snapshot)
+        })
         
         self.view.addSubview(self.captureStillImageView)
     }
@@ -70,34 +80,10 @@ class CameraViewController: UIViewController, CLLocationManagerDelegate {
     // MARK: private methods
     private func displayPoint(heading hd: CLLocationDirection!, fromLocation fromLc: MLocation!,  toLocation toLc: MLocation!) {
         if (hd == nil || fromLc == nil || toLc == nil) {
-            
-            let firebaseId = ref.child("users").childByAutoId().key
-            
-            setUserInfo(name: loginName, id: firebaseId)
-            
-            let post = ["name": loginName]
-            
-            let childUpdates = ["/users/\(firebaseId)": post]
-            ref.updateChildValues(childUpdates)
-            
-            let cameraViewController: CameraViewController = CameraViewController()
-            self.present(cameraViewController, animated: true, completion: nil)
-        }
-        
-    }
-    
-    private func setUserInfo(name: String, id: String) {
-        let userDefaults = UserDefaults.standard
-        
-        userDefaults.set(name, forKey: "firebaseId")
-        userDefaults.set(id, forKey: "name")
-
-            
-            
-            
-            
             return
         }
+    
+        uploadMyLocation(fromLocation: fromLc)
         
         /*
         let latitude = (toLc.latitude - fromLc.latitude)
@@ -147,4 +133,21 @@ class CameraViewController: UIViewController, CLLocationManagerDelegate {
             break
         }
     }
+    
+    /** upload my location data to firebase */
+    private func uploadMyLocation(fromLocation fromLc: MLocation) {
+        if let name: String = self.firebaseName {
+            let post = ["user": ["name": name], "location": ["longitude": fromLc.longitude, "latitude": fromLc.latitude, "altitude": fromLc.altitude]] as [String : Any]
+            if let id: String = self.firebaseId {
+                let childUpdates = ["/users/\(id)/": post]
+                ref.updateChildValues(childUpdates)
+            }
+        }
+    }
+    
+    /** observe firebase**/
+    private func observeOtherLocation(snapshot: FIRDataSnapshot) {
+      //
+    }
+
 }

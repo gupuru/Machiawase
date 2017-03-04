@@ -100,8 +100,8 @@ class LoginViewController: UIViewController {
     private func setUserInfo(name: String, id: String) {
         let userDefaults = UserDefaults.standard
         
-        userDefaults.set(name, forKey: "firebaseId")
-        userDefaults.set(id, forKey: "name")
+        userDefaults.set(id, forKey: "firebaseId")
+        userDefaults.set(name, forKey: "name")
     }
     
 }
