@@ -13,6 +13,8 @@
 		1D24A3601E6A556A00E82BD4 /* MachiawaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D24A35F1E6A556A00E82BD4 /* MachiawaseTests.swift */; };
 		1D24A36B1E6A556A00E82BD4 /* MachiawaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D24A36A1E6A556A00E82BD4 /* MachiawaseUITests.swift */; };
 		43EDDD971E6A58BD00C9B314 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD961E6A58BD00C9B314 /* DebugViewController.swift */; };
+		43EDDD9B1E6A5F7300C9B314 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD9A1E6A5F7300C9B314 /* CameraViewController.swift */; };
+		43EDDD9D1E6A5F9500C9B314 /* CaptureStillImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD9C1E6A5F9500C9B314 /* CaptureStillImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		1D24A36A1E6A556A00E82BD4 /* MachiawaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachiawaseUITests.swift; sourceTree = "<group>"; };
 		1D24A36C1E6A556A00E82BD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43EDDD961E6A58BD00C9B314 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
+		43EDDD9A1E6A5F7300C9B314 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		43EDDD9C1E6A5F9500C9B314 /* CaptureStillImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureStillImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			children = (
 				1D24A34A1E6A556A00E82BD4 /* AppDelegate.swift */,
 				43EDDD961E6A58BD00C9B314 /* DebugViewController.swift */,
+				43EDDD991E6A5F5F00C9B314 /* Camera */,
 				1D24A3511E6A556A00E82BD4 /* Assets.xcassets */,
 				1D24A3531E6A556A00E82BD4 /* LaunchScreen.storyboard */,
 				1D24A3561E6A556A00E82BD4 /* Info.plist */,
@@ -120,6 +125,15 @@
 				1D24A36C1E6A556A00E82BD4 /* Info.plist */,
 			);
 			path = MachiawaseUITests;
+			sourceTree = "<group>";
+		};
+		43EDDD991E6A5F5F00C9B314 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				43EDDD9A1E6A5F7300C9B314 /* CameraViewController.swift */,
+				43EDDD9C1E6A5F9500C9B314 /* CaptureStillImageView.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43EDDD9D1E6A5F9500C9B314 /* CaptureStillImageView.swift in Sources */,
 				43EDDD971E6A58BD00C9B314 /* DebugViewController.swift in Sources */,
 				1D24A34B1E6A556A00E82BD4 /* AppDelegate.swift in Sources */,
+				43EDDD9B1E6A5F7300C9B314 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

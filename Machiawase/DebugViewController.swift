@@ -55,6 +55,7 @@ class DebugViewController: UIViewController {
     }
 
     func onCameraButtonClicked(sender: UIButton) {
-        
+        let cameraViewController: CameraViewController = CameraViewController()
+        self.present(cameraViewController, animated: true, completion: nil)
     }
 }
