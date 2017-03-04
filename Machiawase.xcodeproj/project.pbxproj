@@ -15,6 +15,7 @@
 		43EDDD971E6A58BD00C9B314 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD961E6A58BD00C9B314 /* DebugViewController.swift */; };
 		43EDDD9B1E6A5F7300C9B314 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD9A1E6A5F7300C9B314 /* CameraViewController.swift */; };
 		43EDDD9D1E6A5F9500C9B314 /* CaptureStillImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD9C1E6A5F9500C9B314 /* CaptureStillImageView.swift */; };
+		43EDDDA01E6A651000C9B314 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD9F1E6A651000C9B314 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		43EDDD961E6A58BD00C9B314 /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		43EDDD9A1E6A5F7300C9B314 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		43EDDD9C1E6A5F9500C9B314 /* CaptureStillImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureStillImageView.swift; sourceTree = "<group>"; };
+		43EDDD9F1E6A651000C9B314 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				1D24A34A1E6A556A00E82BD4 /* AppDelegate.swift */,
 				43EDDD961E6A58BD00C9B314 /* DebugViewController.swift */,
+				43EDDD9E1E6A650400C9B314 /* Login */,
 				43EDDD991E6A5F5F00C9B314 /* Camera */,
 				1D24A3511E6A556A00E82BD4 /* Assets.xcassets */,
 				1D24A3531E6A556A00E82BD4 /* LaunchScreen.storyboard */,
@@ -134,6 +137,14 @@
 				43EDDD9C1E6A5F9500C9B314 /* CaptureStillImageView.swift */,
 			);
 			path = Camera;
+			sourceTree = "<group>";
+		};
+		43EDDD9E1E6A650400C9B314 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				43EDDD9F1E6A651000C9B314 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 				43EDDD9D1E6A5F9500C9B314 /* CaptureStillImageView.swift in Sources */,
 				43EDDD971E6A58BD00C9B314 /* DebugViewController.swift in Sources */,
 				1D24A34B1E6A556A00E82BD4 /* AppDelegate.swift in Sources */,
+				43EDDDA01E6A651000C9B314 /* LoginViewController.swift in Sources */,
 				43EDDD9B1E6A5F7300C9B314 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
