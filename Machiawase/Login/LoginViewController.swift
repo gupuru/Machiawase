@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class LoginViewController: UIViewController {
+    
+    private let ref = FIRDatabase.database().reference()
     
     struct Constants {
         static let SideMargin: CGFloat = 16.0
@@ -23,6 +26,7 @@ class LoginViewController: UIViewController {
         
         self.view.addSubview(self.nameTextField)
         self.view.addSubview(self.createButton)
+        
     }
     
     lazy var nameTextField: UITextField = {
@@ -76,6 +80,28 @@ class LoginViewController: UIViewController {
             return
         }
         
-        // TODO: ログイン処理
+        // ログイン処理
+        if let loginName: String = self.nameTextField.text  {
+            let firebaseId = ref.child("users").childByAutoId().key
+            
+            setUserInfo(name: loginName, id: firebaseId)
+            
+            let post = ["name": loginName]
+            
+            let childUpdates = ["/users/\(firebaseId)": post]
+            ref.updateChildValues(childUpdates)
+            
+            let cameraViewController: CameraViewController = CameraViewController()
+            self.present(cameraViewController, animated: true, completion: nil)
+        }
+    
     }
+    
+    private func setUserInfo(name: String, id: String) {
+        let userDefaults = UserDefaults.standard
+        
+        userDefaults.set(id, forKey: "firebaseId")
+        userDefaults.set(name, forKey: "name")
+    }
+    
 }
