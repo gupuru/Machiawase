@@ -12,7 +12,7 @@ import CoreLocation
 class CameraViewController: UIViewController, CLLocationManagerDelegate {
     
     var lm: CLLocationManager! = nil
-    var heading: CLHeading! = nil
+    var heading: CLLocationDirection! = nil
     var currentLocation: MLocation! = nil
     var toLocation: MLocation! = nil // 後で配列にする
     
@@ -67,12 +67,24 @@ class CameraViewController: UIViewController, CLLocationManagerDelegate {
     
     // MARK: -
     // MARK: private methods
-    private func displayPoint(heading hd: CLHeading!, fromLocation fromLc: MLocation!,  toLocation toLc: MLocation!) {
+    private func displayPoint(heading hd: CLLocationDirection!, fromLocation fromLc: MLocation!,  toLocation toLc: MLocation!) {
         if (hd == nil || fromLc == nil || toLc == nil) {
             return
         }
         
+        /*
+        let latitude = (toLc.latitude - fromLc.latitude)
+        let longitude = (toLc.longitude - fromLc.longitude)
+        let altitude = (toLc.altitude - fromLc.altitude)
+        
+        print("point hd:", hd)
+        */
     }
+    
+    private func displayPoint(heading hd: CLLocationDirection!, fromLocation fromLc: MLocation!,  toLocations toLcs: [MLocation]!) {
+        
+    }
+    
     
     // MARK: -
     // MARK: CLLocationManagerDelegate methods
@@ -91,7 +103,9 @@ class CameraViewController: UIViewController, CLLocationManagerDelegate {
     
     /** 方向取得成功時 */
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        heading = newHeading
+        heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading);
+        
+//        heading = newHeading
         displayPoint(heading: heading, fromLocation: currentLocation, toLocation: toLocation)
     }
     
