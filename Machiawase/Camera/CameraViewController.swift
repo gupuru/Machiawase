@@ -25,6 +25,7 @@ class CameraViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.black
         
         self.view.addSubview(self.captureStillImageView)
     }

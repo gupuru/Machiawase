@@ -16,6 +16,7 @@
 		43EDDD9B1E6A5F7300C9B314 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD9A1E6A5F7300C9B314 /* CameraViewController.swift */; };
 		43EDDD9D1E6A5F9500C9B314 /* CaptureStillImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD9C1E6A5F9500C9B314 /* CaptureStillImageView.swift */; };
 		43EDDDA01E6A651000C9B314 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD9F1E6A651000C9B314 /* LoginViewController.swift */; };
+		43EDDDA51E6A7BB200C9B314 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDDA41E6A7BB200C9B314 /* PeopleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		43EDDD9A1E6A5F7300C9B314 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		43EDDD9C1E6A5F9500C9B314 /* CaptureStillImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureStillImageView.swift; sourceTree = "<group>"; };
 		43EDDD9F1E6A651000C9B314 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		43EDDDA41E6A7BB200C9B314 /* PeopleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			children = (
 				43EDDD9A1E6A5F7300C9B314 /* CameraViewController.swift */,
 				43EDDD9C1E6A5F9500C9B314 /* CaptureStillImageView.swift */,
+				43EDDDA31E6A7BA500C9B314 /* People */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -145,6 +148,14 @@
 				43EDDD9F1E6A651000C9B314 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		43EDDDA31E6A7BA500C9B314 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				43EDDDA41E6A7BB200C9B314 /* PeopleView.swift */,
+			);
+			path = People;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +296,7 @@
 				43EDDD971E6A58BD00C9B314 /* DebugViewController.swift in Sources */,
 				1D24A34B1E6A556A00E82BD4 /* AppDelegate.swift in Sources */,
 				43EDDDA01E6A651000C9B314 /* LoginViewController.swift in Sources */,
+				43EDDDA51E6A7BB200C9B314 /* PeopleView.swift in Sources */,
 				43EDDD9B1E6A5F7300C9B314 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
