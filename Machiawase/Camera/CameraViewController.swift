@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import FirebaseDatabase
 
 class CameraViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -15,13 +16,13 @@ class CameraViewController: UIViewController, CLLocationManagerDelegate {
     var heading: CLHeading! = nil
     var currentLocation: MLocation! = nil
     var toLocation: MLocation! = nil // 後で配列にする
-    
+    private let ref = FIRDatabase.database().reference()
+
     struct MLocation {
         public var latitude: CLLocationDegrees!
         public var longitude: CLLocationDegrees!
         public var altitude: CLLocationDistance!
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +70,32 @@ class CameraViewController: UIViewController, CLLocationManagerDelegate {
     // MARK: private methods
     private func displayPoint(heading hd: CLHeading!, fromLocation fromLc: MLocation!,  toLocation toLc: MLocation!) {
         if (hd == nil || fromLc == nil || toLc == nil) {
+            
+            let firebaseId = ref.child("users").childByAutoId().key
+            
+            setUserInfo(name: loginName, id: firebaseId)
+            
+            let post = ["name": loginName]
+            
+            let childUpdates = ["/users/\(firebaseId)": post]
+            ref.updateChildValues(childUpdates)
+            
+            let cameraViewController: CameraViewController = CameraViewController()
+            self.present(cameraViewController, animated: true, completion: nil)
+        }
+        
+    }
+    
+    private func setUserInfo(name: String, id: String) {
+        let userDefaults = UserDefaults.standard
+        
+        userDefaults.set(name, forKey: "firebaseId")
+        userDefaults.set(id, forKey: "name")
+
+            
+            
+            
+            
             return
         }
         

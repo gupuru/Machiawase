@@ -8,14 +8,11 @@
 
 import UIKit
 import FirebaseDatabase
-import CoreLocation
 
-class LoginViewController: UIViewController, CLLocationManagerDelegate {
+class LoginViewController: UIViewController {
     
     private let ref = FIRDatabase.database().reference()
-    private var locationManager: CLLocationManager!
-    private var location: CLLocation!
-
+    
     struct Constants {
         static let SideMargin: CGFloat = 16.0
         static let NameFont: UIFont = UIFont.systemFont(ofSize: 28.0)
@@ -30,19 +27,6 @@ class LoginViewController: UIViewController, CLLocationManagerDelegate {
         self.view.addSubview(self.nameTextField)
         self.view.addSubview(self.createButton)
         
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager = CLLocationManager()
-            locationManager.delegate = self
-            locationManager.startUpdatingLocation()
-        }
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.stopUpdatingLocation()
-        }
     }
     
     lazy var nameTextField: UITextField = {
@@ -72,30 +56,6 @@ class LoginViewController: UIViewController, CLLocationManagerDelegate {
         return button
     }()
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
-        case .restricted, .denied:
-            break
-        case .authorizedAlways, .authorizedWhenInUse:
-            break
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let newLocation = locations.last,
-            CLLocationCoordinate2DIsValid(newLocation.coordinate) else {
-                let title: String = "Error"
-                let message: String = "Errrrrrrrrrrrror."
-                let alertController: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-                alertController.addAction( UIAlertAction(title: "OK", style: .default, handler: nil ))
-                self.present(alertController, animated: true, completion: nil)
-                return
-        }
-        self.location = newLocation
-    }
-    
     // MARK: Actions
     
     func onCreateButtonClicked(sender: UIButton) {
@@ -122,11 +82,26 @@ class LoginViewController: UIViewController, CLLocationManagerDelegate {
         
         // ログイン処理
         if let loginName: String = self.nameTextField.text  {
-            if let data: CLLocation = self.location {
-                ref.child("users").childByAutoId().setValue(["name": loginName, "location": ["longitude": data.coordinate.longitude, "latitude": data.coordinate.longitude, "altitude": data.altitude]])
-            }
+            let firebaseId = ref.child("users").childByAutoId().key
+            
+            setUserInfo(name: loginName, id: firebaseId)
+            
+            let post = ["name": loginName]
+            
+            let childUpdates = ["/users/\(firebaseId)": post]
+            ref.updateChildValues(childUpdates)
+            
+            let cameraViewController: CameraViewController = CameraViewController()
+            self.present(cameraViewController, animated: true, completion: nil)
         }
     
+    }
+    
+    private func setUserInfo(name: String, id: String) {
+        let userDefaults = UserDefaults.standard
+        
+        userDefaults.set(name, forKey: "firebaseId")
+        userDefaults.set(id, forKey: "name")
     }
     
 }
