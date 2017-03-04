@@ -51,7 +51,9 @@ class DebugViewController: UIViewController {
     // MARK: Actions
     
     func onLoginButtonClicked(sender: UIButton) {
-        
+        let loginViewController: LoginViewController = LoginViewController()
+        let navigationController: UINavigationController = UINavigationController(rootViewController: loginViewController)
+        self.present(navigationController, animated: true, completion: nil)
     }
 
     func onCameraButtonClicked(sender: UIButton) {
