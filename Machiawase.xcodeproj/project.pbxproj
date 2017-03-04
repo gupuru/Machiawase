@@ -12,10 +12,12 @@
 		1D24A3551E6A556A00E82BD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D24A3531E6A556A00E82BD4 /* LaunchScreen.storyboard */; };
 		1D24A3601E6A556A00E82BD4 /* MachiawaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D24A35F1E6A556A00E82BD4 /* MachiawaseTests.swift */; };
 		1D24A36B1E6A556A00E82BD4 /* MachiawaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D24A36A1E6A556A00E82BD4 /* MachiawaseUITests.swift */; };
+		2692C045675060E72CAF206F /* Pods_Machiawase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187FA12421ED9D40A481A04A /* Pods_Machiawase.framework */; };
 		43EDDD971E6A58BD00C9B314 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD961E6A58BD00C9B314 /* DebugViewController.swift */; };
 		43EDDD9B1E6A5F7300C9B314 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD9A1E6A5F7300C9B314 /* CameraViewController.swift */; };
 		43EDDD9D1E6A5F9500C9B314 /* CaptureStillImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD9C1E6A5F9500C9B314 /* CaptureStillImageView.swift */; };
 		43EDDDA01E6A651000C9B314 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDDD9F1E6A651000C9B314 /* LoginViewController.swift */; };
+		556CBFBB1E6A7D780017C391 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 556CBFBA1E6A7D780017C391 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		187FA12421ED9D40A481A04A /* Pods_Machiawase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Machiawase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D24A3471E6A556A00E82BD4 /* Machiawase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Machiawase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D24A34A1E6A556A00E82BD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D24A3511E6A556A00E82BD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +54,9 @@
 		43EDDD9A1E6A5F7300C9B314 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		43EDDD9C1E6A5F9500C9B314 /* CaptureStillImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureStillImageView.swift; sourceTree = "<group>"; };
 		43EDDD9F1E6A651000C9B314 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		556CBFBA1E6A7D780017C391 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9990473F869D3890BE22C2B0 /* Pods-Machiawase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Machiawase.release.xcconfig"; path = "Pods/Target Support Files/Pods-Machiawase/Pods-Machiawase.release.xcconfig"; sourceTree = "<group>"; };
+		E9CEB98E146847B60430067F /* Pods-Machiawase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Machiawase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Machiawase/Pods-Machiawase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2692C045675060E72CAF206F /* Pods_Machiawase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		099B5B6C4F8AAFE811F0BDF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9CEB98E146847B60430067F /* Pods-Machiawase.debug.xcconfig */,
+				9990473F869D3890BE22C2B0 /* Pods-Machiawase.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1D24A33E1E6A556A00E82BD4 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +101,8 @@
 				1D24A35E1E6A556A00E82BD4 /* MachiawaseTests */,
 				1D24A3691E6A556A00E82BD4 /* MachiawaseUITests */,
 				1D24A3481E6A556A00E82BD4 /* Products */,
+				099B5B6C4F8AAFE811F0BDF8 /* Pods */,
+				9DEDC4332B41151123C8C8EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +125,7 @@
 				43EDDD991E6A5F5F00C9B314 /* Camera */,
 				1D24A3511E6A556A00E82BD4 /* Assets.xcassets */,
 				1D24A3531E6A556A00E82BD4 /* LaunchScreen.storyboard */,
+				556CBFBA1E6A7D780017C391 /* GoogleService-Info.plist */,
 				1D24A3561E6A556A00E82BD4 /* Info.plist */,
 			);
 			path = Machiawase;
@@ -147,6 +166,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		9DEDC4332B41151123C8C8EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				187FA12421ED9D40A481A04A /* Pods_Machiawase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D24A36F1E6A556A00E82BD4 /* Build configuration list for PBXNativeTarget "Machiawase" */;
 			buildPhases = (
+				77C2282729ED053354675127 /* [CP] Check Pods Manifest.lock */,
 				1D24A3431E6A556A00E82BD4 /* Sources */,
 				1D24A3441E6A556A00E82BD4 /* Frameworks */,
 				1D24A3451E6A556A00E82BD4 /* Resources */,
+				51818403415EE982560BDAC4 /* [CP] Embed Pods Frameworks */,
+				D4ACCEB41E875FD6E3DCCD1D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,7 +245,7 @@
 				TargetAttributes = {
 					1D24A3461E6A556A00E82BD4 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = QTG7MUN42X;
+						DevelopmentTeam = 8C8AQF3H5E;
 						ProvisioningStyle = Automatic;
 					};
 					1D24A35A1E6A556A00E82BD4 = {
@@ -257,6 +287,7 @@
 			files = (
 				1D24A3551E6A556A00E82BD4 /* LaunchScreen.storyboard in Resources */,
 				1D24A3521E6A556A00E82BD4 /* Assets.xcassets in Resources */,
+				556CBFBB1E6A7D780017C391 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +306,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51818403415EE982560BDAC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Machiawase/Pods-Machiawase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77C2282729ED053354675127 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D4ACCEB41E875FD6E3DCCD1D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Machiawase/Pods-Machiawase-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D24A3431E6A556A00E82BD4 /* Sources */ = {
@@ -425,10 +504,11 @@
 		};
 		1D24A3701E6A556A00E82BD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9CEB98E146847B60430067F /* Pods-Machiawase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = QTG7MUN42X;
+				DEVELOPMENT_TEAM = 8C8AQF3H5E;
 				INFOPLIST_FILE = Machiawase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hazukit.com.Machiawase;
@@ -439,10 +519,11 @@
 		};
 		1D24A3711E6A556A00E82BD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9990473F869D3890BE22C2B0 /* Pods-Machiawase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = QTG7MUN42X;
+				DEVELOPMENT_TEAM = 8C8AQF3H5E;
 				INFOPLIST_FILE = Machiawase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hazukit.com.Machiawase;

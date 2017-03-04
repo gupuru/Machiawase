@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>36618391647-4vkbs0h22m2m38if1c3c7l44tkqujf05.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.36618391647-4vkbs0h22m2m38if1c3c7l44tkqujf05</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBvTiZ3Smb58RsvYEEcgZG0mSj6G3NXULU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>36618391647</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>hazukit.com.Machiawase</string>
+	<key>PROJECT_ID</key>
+	<string>machiawase-try-swift</string>
+	<key>STORAGE_BUCKET</key>
+	<string>machiawase-try-swift.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:36618391647:ios:ecbb321ad7358ec2</string>
+	<key>DATABASE_URL</key>
+	<string>https://machiawase-try-swift.firebaseio.com</string>
+</dict>
+</plist>
